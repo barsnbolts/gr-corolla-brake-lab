@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101312">
+  <meta name="description" content="Explore three scan-based GR Corolla brake-cooling concepts. Real CAD, interactive 3D, and an honest look at the trade-offs.">
+  <meta property="og:title" content="GR Brake Lab — Air, with intent.">
+  <meta property="og:description" content="Three approaches to one brake corner. Explore the real geometry and compare the trade-offs.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://barsnbolts.github.io/gr-corolla-brake-lab/">
+  <meta property="og:image" content="https://barsnbolts.github.io/gr-corolla-brake-lab/assets/b-context.webp">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="font" href="assets/vendor/barlow-condensed-700.ttf" type="font/ttf" crossorigin>
+  <link rel="preload" as="image" href="assets/b-poster.webp">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+  <title>GR Brake Lab — Three Cooling Concepts</title>
+</head>
+<body>
+  <a class="skip-link" href="#concepts">Skip to the concepts</a>
+  <div class="read-progress" aria-hidden="true"><span></span></div>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="GR Brake Lab home"><span class="brand-stripes" aria-hidden="true"></span><strong>GR <span>BRAKE LAB</span></strong></a>
+    <nav aria-label="Main navigation"><a href="#compare">Compare</a><a href="#evidence">Evidence</a><button class="share-button" type="button" id="share"><span>Share</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m-4 4 4-4 4 4M5 12v8h14v-8"/></svg></button></nav>
+  </header>
+  <main id="top">
+    <section class="hero shell" aria-labelledby="hero-title">
+      <div class="hero-intro">
+        <p class="eyebrow reveal"><span class="tiny-line"></span> GR COROLLA / FRONT BRAKE STUDY</p>
+        <h1 id="hero-title" class="reveal">AIR, WITH<br><span>INTENT.</span></h1>
+        <p class="hero-deck reveal">Three approaches.<br> One brake corner.</p>
+        <p class="hero-description reveal">Explore the real geometry, the different connections, and the trade-offs behind each cooling concept.</p>
+        <a class="text-link reveal" href="#concepts">Find your approach <span aria-hidden="true">↗</span></a>
+        <div class="study-stamp reveal"><span class="status-dot" aria-hidden="true"></span><span>SCAN-BASED DIGITAL CONCEPTS<br><small>2023 GR Corolla · Study 003</small></span></div>
+      </div>
+      <div class="explorer" id="concepts">
+        <div class="option-tabs" role="tablist" aria-label="Cooling concept">
+          <button type="button" role="tab" id="tab-a" aria-controls="concept-stage" aria-selected="false" tabindex="-1" data-option="a"><span>A</span><span>Enclosed</span></button>
+          <button type="button" role="tab" id="tab-b" aria-controls="concept-stage" aria-selected="true" tabindex="0" data-option="b"><span>B</span><span>Open guide</span></button>
+          <button type="button" role="tab" id="tab-c" aria-controls="concept-stage" aria-selected="false" tabindex="-1" data-option="c"><span>C</span><span>Hose adapter</span></button>
+        </div>
+        <p class="concept-status">Digital concepts · Fit, materials and cooling unverified.</p>
+        <div class="stage" id="concept-stage" role="tabpanel" aria-labelledby="tab-b" tabindex="0" data-view="part">
+          <div class="stage-topline"><span id="stage-label">B / COMPACT OPEN GUIDE</span><span class="stage-tag">ACTUAL CAD</span></div>
+          <span class="stage-index" aria-hidden="true" id="stage-index">02</span>
+          <div class="media-wrap" id="media-wrap"><img id="concept-image" src="assets/b-poster.webp" width="1200" height="1000" alt="Teal compact open guide with an inlet flange and an intentionally open side." fetchpriority="high"><div id="model-slot" hidden></div></div>
+          <div class="stage-bottomline"><span id="view-caption">Original component geometry</span><button id="expand-image" class="icon-button" type="button" aria-label="Enlarge current CAD view"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M3 3l6 6m12-6-6 6M3 21l6-6m12 6-6-6"/></svg></button></div>
+          <div id="model-controls" class="model-controls" hidden><button type="button" id="rotate-model" aria-pressed="false">Auto-rotate</button><button type="button" id="reset-model">Reset view</button></div>
+          <div id="media-status" class="media-status" role="status" aria-live="polite"></div>
+        </div>
+        <div class="view-tabs" role="group" aria-label="View type"><button type="button" data-view="part" aria-pressed="true">Part</button><button type="button" data-view="context" aria-pressed="false">In the car</button><button type="button" data-view="section" aria-pressed="false">Section</button><button type="button" data-view="3d" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 9 5v9l-9 5-9-5V8l9-5Zm-9 5 9 5 9-5m-9 5v9m-5-17 9 5"/></svg>Explore 3D</button></div>
+        <p class="media-note" id="media-note">Real geometry. Presentation colours. Nominal scale, not calibrated fit.</p>
+      </div>
+    </section>
+
+    <section class="concept-story shell" aria-labelledby="concept-title">
+      <div class="section-marker"><span id="story-number">02 / THE OPEN APPROACH</span><span class="marker-rule"></span><span>CONCEPT STUDY</span></div>
+      <div class="story-grid">
+        <div><p class="eyebrow" id="concept-kicker">B — COMPACT OPEN GUIDE</p><h2 id="concept-title">Less enclosure.<br>More possibility.</h2><p class="large-copy" id="concept-description">A shorter, broad guide that leaves one side open. It is the first packaging candidate, with less control over where the air goes.</p></div>
+        <div class="story-details"><span class="recommendation" id="recommendation">FIRST PACKAGING CANDIDATE</span><dl class="spec-list"><div><dt>Connection</dt><dd id="spec-mount">Proposed liner attachment</dd></div><div><dt>Discharge</dt><dd id="spec-route">Broad, open brake-region guide</dd></div><div><dt>Outlet shape</dt><dd id="spec-outlet">112 × 82 mm open envelope</dd></div></dl><p class="spec-note">Dimensions are design values in nominal millimetres. B’s outlet describes an open envelope, not a closed flow section.</p><div class="tradeoff"><span>THE TRADE-OFF</span><p id="concept-tradeoff">An open side makes the guide compact and easy to inspect. Air can also spill out, reducing directional capture.</p></div></div>
+      </div>
+      <div class="connection-diagram" aria-label="Conceptual connection, not simulated airflow"><div class="connection-node"><span>01</span><strong>Factory liner outlet</strong></div><span class="connection-line" aria-hidden="true"></span><div class="connection-node"><span>02</span><strong id="connection-part">Open guide</strong></div><span class="connection-line is-open" aria-hidden="true"></span><div class="connection-node"><span>03</span><strong id="connection-end">Free discharge near brakes</strong></div></div>
+      <p class="diagram-note" id="diagram-note">Concept connection only. No mechanical bridge to the moving brake assembly.</p>
+    </section>
+
+    <section class="comparison-section" id="compare" aria-labelledby="compare-title">
+      <div class="shell"><div class="section-heading reveal"><div><p class="eyebrow">SIDE BY SIDE</p><h2 id="compare-title">Choose a trade-off.</h2></div><p>The same provisional liner interface.<br>Three different ways forward.</p></div>
+        <div class="comparison-grid">
+          <article class="comparison-card reveal" data-theme="a"><div class="card-top"><span class="option-letter">A</span><span>THE ENCLOSED APPROACH</span></div><img src="assets/a-poster.webp" width="1200" height="1000" loading="lazy" alt="Orange enclosed nozzle with a curved, closed passage."><h3>Enclosed nozzle</h3><p>Contains the passage and carries the outlet farther into the wheel well.</p><dl><div><dt>Passage</dt><dd>Enclosed</dd></div><div><dt>Terminal geometry</dt><dd>106 × 78 mm</dd></div><div><dt>Main compromise</dt><dd>Greater reach to check</dd></div></dl><button type="button" class="card-link" data-select="a">Explore A <span aria-hidden="true">↗</span></button></article>
+          <article class="comparison-card reveal" data-theme="b"><div class="card-top"><span class="option-letter">B</span><span>THE OPEN APPROACH</span></div><img src="assets/b-poster.webp" width="1200" height="1000" loading="lazy" alt="Teal open guide with a shorter body and one open side."><h3>Compact open guide</h3><p>A shorter open guide with less modeled body volume and possible airflow spill.</p><dl><div><dt>Passage</dt><dd>One side open</dd></div><div><dt>Terminal envelope</dt><dd>112 × 82 mm</dd></div><div><dt>Main compromise</dt><dd>Less contained delivery</dd></div></dl><button type="button" class="card-link" data-select="b">Explore B <span aria-hidden="true">↗</span></button></article>
+          <article class="comparison-card reveal" data-theme="c"><div class="card-top"><span class="option-letter">C</span><span>THE HOSE-FED APPROACH</span></div><img src="assets/c-poster.webp" width="1200" height="1000" loading="lazy" alt="Blue rectangular-to-round upstream hose adapter."><h3>Upstream hose adapter</h3><p>A transition for a future hose-fed layout. The hose and rotor receiver are not included.</p><dl><div><dt>Passage</dt><dd>Rectangular to round</dd></div><div><dt>Nominal round bore</dt><dd>Ø57 mm</dd></div><div><dt>Main compromise</dt><dd>Separate system needed</dd></div></dl><button type="button" class="card-link" data-select="c">Explore C <span aria-hidden="true">↗</span></button></article>
+        </div>
+        <div class="geometry-fact reveal"><span class="fact-number">51.9<span>%</span></span><div><h3>Less modeled solid volume.</h3><p>B uses 51.9% less CAD body volume than A. That is a geometry comparison; it does not establish strength, printability or cooling benefit.</p></div><span class="fact-label">B COMPARED WITH A</span></div>
+      </div>
+    </section>
+
+    <section class="evidence-section shell" id="evidence" aria-labelledby="evidence-title"><div class="section-heading reveal"><div><p class="eyebrow">BUILT ON EVIDENCE</p><h2 id="evidence-title">Inspect the idea.<br>Know its limits.</h2></div><p>These are scan-based digital concepts.<br>Physical fit, material suitability and<br>cooling performance remain unverified.</p></div>
+      <div class="evidence-grid"><div class="evidence-lead reveal"><span class="evidence-symbol" aria-hidden="true">↗</span><h3>A real brake corner.<br>A deliberate next step.</h3><p>All three concepts use the same scan-derived datum and proposed liner attachment. The nonplanar lip, mounting contact and sealing still need measured refinement.</p><p>Start by refining the shared interface, then evaluate B for packaging with A as the enclosed reference. Flow testing could change that choice.</p></div><div class="evidence-details">
+        <details open><summary><span>01</span>What the digital checks establish<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div><p>Each concept has valid CAD solids and a reflected counterpart. All six STEP exports passed fresh readback. Saved 3D meshes were checked against the source geometry.</p><p>Static scan checks found no triangle crossings in the recorded pose. The shared closest vertex sample is 0.829 mm; it is not a certified minimum clearance.</p></div></details>
+        <details><summary><span>02</span>What still needs the actual car<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div><p>Physical scale, liner contact and sealing, backside support, fastener retention, wheel and tyre clearance, full steering and suspension movement, and material/temperature testing.</p><p>The wheel is absent from the scan. Reflected geometry does not verify the opposite side. No prototype or installation is approved by this study.</p></div></details>
+        <details><summary><span>03</span>Why the hose adapter is a separate choice<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div><p>C finishes the upstream component concept. An actual hose fit, retention method, moving hose route and rotor-side receiver are separate work. Its nominal 63 mm outside / 57 mm inside round band is a design choice.</p><p>The terminal section is 67.6% smaller than the inlet section. The piecewise taper has slope changes; pressure loss and cooling have not been measured.</p></div></details>
+        <details><summary><span>04</span>How to read these views<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div><p>“Part” and interactive 3D show the new component. “In the car” places it against the recorded scan pose. “Section” is a diagnostic visual cut, not a manufactured half-part.</p><p>Colours and orientation aid comparison. Dimensions remain nominal and uncalibrated. There is no simulated airflow in these animations.</p><p>C’s tested one-degree aim edit succeeds; a tested three-degree edit is rejected by the CAD construction. Arbitrary parameter changes are not qualified.</p></div></details>
+      </div></div>
+      <div class="sources-block reveal"><p class="eyebrow">THE DESIGN CONVERSATION</p><h3>Inspired by established mechanisms.<br>Measured against this scan.</h3><p>GR Corolla, GR Yaris and other-platform references informed the alternatives. Their dimensions, materials and performance claims do not transfer to these concepts.</p><div class="source-links"><a href="https://www.skrdynamics.com/product-page/gr-yaris-brake-duct" target="_blank" rel="noopener noreferrer">SKR / liner extension <span aria-hidden="true">↗</span></a><a href="https://www.verus-engineering.com/shop/full-brake-cooling-kit-toyota-gr-corolla-4199" target="_blank" rel="noopener noreferrer">Verus / hose-fed system <span aria-hidden="true">↗</span></a><a href="https://www.pirasmotorsport.com/collections/best-sellers/products/piii-gr-corolla-brake-cooling-kit" target="_blank" rel="noopener noreferrer">PIRAS / open scoop <span aria-hidden="true">↗</span></a><a href="https://www.apexi.co.jp/products/others/gr-corolla-gzea14h-originalparts/" target="_blank" rel="noopener noreferrer">APEXi / open shroud <span aria-hidden="true">↗</span></a><a href="https://apracing.com/race-car/brake-discs/disc-cooling" target="_blank" rel="noopener noreferrer">AP Racing / cooling principles <span aria-hidden="true">↗</span></a><a href="https://www.essexparts.com/news-blog/do-i-need-brake-ducts-on-my-track-car" target="_blank" rel="noopener noreferrer">Essex / brake-region airflow <span aria-hidden="true">↗</span></a></div></div>
+    </section>
+  </main>
+  <footer class="site-footer shell"><a class="wordmark" href="#top"><span class="brand-stripes" aria-hidden="true"></span><strong>GR <span>BRAKE LAB</span></strong></a><p>Independent concept study · October 2026<br>Not affiliated with Toyota or the referenced manufacturers.</p><a href="https://github.com/barsnbolts/gr-corolla-brake-lab" target="_blank" rel="noopener noreferrer">View site source <span aria-hidden="true">↗</span></a></footer>
+  <p id="announcement" class="sr-only" role="status" aria-live="polite"></p>
+  <dialog id="image-dialog" aria-label="Enlarged CAD view"><button type="button" class="dialog-close" aria-label="Close enlarged view">Close <span aria-hidden="true">×</span></button><img id="dialog-image" alt=""><p id="dialog-caption"></p></dialog>
+  <dialog id="share-dialog" aria-labelledby="share-title"><button type="button" class="dialog-close" aria-label="Close share dialog">Close <span aria-hidden="true">×</span></button><h2 id="share-title">Take the idea with you.</h2><p>Copy this link to reopen the selected concept and view.</p><label for="share-url">Shareable link</label><input id="share-url" type="url" readonly><button type="button" id="copy-link" class="primary-button">Copy link</button><p id="share-status" role="status"></p></dialog>
+  <noscript><p class="noscript">The comparison and evidence remain available below. Enable JavaScript to switch views and explore interactive 3D.</p></noscript>
+</body>
+</html>
