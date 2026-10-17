@@ -42,9 +42,12 @@ async function show3D(ticket){
       $('#model-slot').append(viewer);
     }
     viewer.alt='Interactive 3D: '+options[selected].name+'. Nominal, uncalibrated concept geometry.';
-    viewer.poster=`assets/${selected}-poster.webp`;viewer.src=`assets/${selected}.glb`+(modelFailures?'?retry='+modelFailures:'');
+    const modelSource=`assets/${selected}.glb`+(modelFailures?'?retry='+modelFailures:'');
+    // The component keeps the previous loaded state until its next update.
+    const alreadyLoaded=viewer.src===modelSource&&viewer.loaded;
+    viewer.poster=`assets/${selected}-poster.webp`;viewer.src=modelSource;
     $('#model-slot').hidden=false;
-    if(viewer.loaded){image.hidden=true;$('#media-status').textContent='';$('#model-controls').hidden=false;stage.setAttribute('aria-busy','false');resetCamera();setRotation(rotate);}
+    if(alreadyLoaded){image.hidden=true;$('#media-status').textContent='';$('#model-controls').hidden=false;stage.setAttribute('aria-busy','false');resetCamera();setRotation(rotate);}
   }catch(error){if(ticket!==request)return;$('#media-status').textContent='3D is unavailable. The original CAD render remains available; tap Explore 3D to retry.';stage.setAttribute('aria-busy','false');}
 }
 
