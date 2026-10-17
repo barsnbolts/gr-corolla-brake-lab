@@ -19,17 +19,16 @@ function setRotation(value){rotate=value&&!motion.matches;$('#rotate-model').set
 function resetCamera(){if(!viewer)return;viewer.cameraOrbit='35deg 63deg 105%';viewer.cameraTarget='0m 0m 0m';viewer.resetTurntableRotation();viewer.jumpCameraToGoal();}
 
 function loadViewer(){
-  if(viewerReady)return viewerReady;
-  viewerReady=new Promise((resolve,reject)=>{
-    const script=document.createElement('script');script.type='module';
-    script.src='assets/vendor/model-viewer.min.js'+(viewerAttempt?'?retry='+viewerAttempt:'');viewerAttempt+=1;
-    const timeout=setTimeout(()=>{script.remove();reject(new Error('3D viewer timed out.'));},15000);
-    script.onload=()=>customElements.whenDefined('model-viewer').then(()=>{clearTimeout(timeout);resolve();});
-    script.onerror=()=>{clearTimeout(timeout);script.remove();reject(new Error('3D viewer could not load.'));};
-    document.head.append(script);
-  }).catch(error=>{viewerReady=null;throw error;});
-  return viewerReady;
+  if(customElements.get('model-viewer'))return Promise.resolve();
+  if(!viewerReady){
+    const source='./assets/vendor/model-viewer.min.js'+(viewerAttempt?'?retry='+viewerAttempt:'');viewerAttempt+=1;
+    viewerReady=import(source).then(()=>customElements.whenDefined('model-viewer')).catch(error=>{viewerReady=null;throw error;});
+  }
+  // A timeout keeps the in-flight module reusable; importing it twice redefines its elements.
+  let timeout;
+  return Promise.race([viewerReady,new Promise((resolve,reject)=>{timeout=setTimeout(()=>reject(new Error('3D viewer timed out.')),15000);})]).finally(()=>clearTimeout(timeout));
 }
+
 async function show3D(ticket){
   $('#media-status').textContent='Preparing the real 3D model…';
   try{
