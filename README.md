@@ -1,7 +1,7 @@
 # GR Brake Lab
 
-A mobile-first, buildless showcase of three scan-based GR Corolla brake-cooling component concepts. Public media is limited to derived images and the three proposed parts. Raw scans, project paths, CAD source and private evidence are not included.
+R015 mainline design review. All four current designs are rejected and modelling is paused. The site preserves derived renders and component display meshes for comparison. No raw scans, private evidence, authoring files or project paths are published.
 
-Open index.html through a static HTTP server or GitHub Pages. Interactive 3D loads a pinned local copy of Google model-viewer 4.4.0 only when selected. Third-party license notices are in assets/vendor/. Display fonts use Barlow Condensed (SIL OFL). The concept media is original project work.
+Open index.html through a static server or GitHub Pages. The interactive viewer uses the existing pinned local model-viewer package; licenses are in assets/vendor/. Historical explorer assets remain available.
 
-Fit, retention, wheel/full-motion clearance, materials/heat and cooling remain unverified. The hose adapter is upstream only.
+No fabrication, fit, retention, clearance or cooling approval is implied.
