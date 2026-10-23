@@ -10,9 +10,9 @@
     },
     {
       "id": "V2",
-      "title": "Open brake-side guide",
-      "summary": "Knuckle-following open guide \u2192 inner rotor ventilation region.",
-      "decision": "Borrow the open turning surface. Keep the chosen knuckle support; arm-mounted examples do not prove its motion clearance.",
+      "title": "Arm scoop / body shroud",
+      "summary": "V2A arm-mounted open scoop; V2B body-fixed turning shroud.",
+      "decision": "Closely recreate approved PIRAS/cworks and A\u2019PEXi mechanisms, adapting only required Corolla support and air-path details. First editable candidates remain unfinished.",
       "color": "#286a59"
     },
     {
