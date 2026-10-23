@@ -12,7 +12,7 @@
       "id": "V2",
       "title": "Arm scoop / body shroud",
       "summary": "V2A arm-mounted open scoop; V2B body-fixed turning shroud.",
-      "decision": "Closely recreate approved PIRAS/cworks and A\u2019PEXi mechanisms, adapting only required Corolla support and air-path details. First editable candidates remain unfinished.",
+      "decision": "Current arm deflector and body shroud have editable support proposals. Broader split-vane, twin-ramp and open-relay directions are being compared; donor fit and performance are not transferred.",
       "color": "#286a59"
     },
     {
@@ -350,7 +350,7 @@
         },
         {
           "src": "https://static.wixstatic.com/media/f409d7_a6cbd16e47714a0bb899d447feda0fdd~mv2.jpg/v1/fill/w_1126,h_936,al_c,q_85,enc_avif,quality_auto/f409d7_a6cbd16e47714a0bb899d447feda0fdd~mv2.jpg",
-          "caption": "Sprogley detail \u00b7 remotely hosted"
+          "caption": "Sprogley test graph \u00b7 remotely hosted"
         }
       ],
       "secondary": false,
