@@ -248,11 +248,11 @@
       "links": [
         {
           "label": "Scoop.stl",
-          "url": "../work/research/r008-scoop-assets/magnust-bmw-m2-v2/Scoop.stl"
+          "url": "assets/review/magnust-Scoop.stl"
         },
         {
           "label": "Tube.stl",
-          "url": "../work/research/r008-scoop-assets/magnust-bmw-m2-v2/Tube.stl"
+          "url": "assets/review/magnust-Tube.stl"
         }
       ]
     },
