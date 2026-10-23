@@ -149,7 +149,7 @@
       "kind": "Same car \u00b7 arm-mounted",
       "url": "https://www.pirasmotorsport.com/collections/best-sellers/products/piii-gr-corolla-brake-cooling-kit",
       "borrow": "Low mouth, broad turning face and raised edges in Corolla packaging.",
-      "limit": "Control-arm attachment differs from our knuckle-following V2.",
+      "limit": "Selected V2A mechanism: control-arm mounting. Donor seat dimensions and our actual retention still require adaptation.",
       "images": [
         {
           "src": "assets/review/v2-01-piras-installed.jpg",
@@ -201,10 +201,10 @@
       "id": "V2-04",
       "version": "V2",
       "title": "A\u2019PEXi N1 \u00b7 GR Corolla",
-      "kind": "Additional design \u00b7 chassis air shroud",
+      "kind": "V2B \u00b7 body-fixed brake-air shroud",
       "url": "https://www.apexi.co.jp/products/others/gr-corolla-gzea14h-originalparts/",
-      "borrow": "Owner-selected additional design: broad collector/turning floor, curved side edge and local support tabs. Third image shows the shroud CAD over scan context.",
-      "limit": "Separate stationary underbody design. Keep distinct from our knuckle-following V2; source images do not establish our exact fixing dimensions or airflow.",
+      "borrow": "Selected V2B: broad collector and turning apron, curved sidewall and local body-support tabs. The scan/CAD images guide the mechanism.",
+      "limit": "Body-fixed, distinct from the V2A arm scoop. Source images do not establish our exact fixing dimensions or airflow.",
       "images": [
         {
           "src": "assets/review/v2-04-apexi-installed.jpg",
