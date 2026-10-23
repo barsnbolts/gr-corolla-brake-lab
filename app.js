@@ -1,20 +1,28 @@
 'use strict';
 const $ = (selector) => document.querySelector(selector);
 const options = {
-  a: { name:'Enclosed nozzle', label:'A / ENCLOSED NOZZLE', number:'01', kicker:'A — THE ENCLOSED APPROACH', title:['More enclosure.','More reach.'], description:'A curved, enclosed nozzle carries the factory liner feed toward a free outlet near the brake region. It retains the original reference design.', tag:'ENCLOSED REFERENCE', route:'Enclosed passage; free discharge', outlet:'106 × 78 mm rounded rectangle', tradeoff:'A contained passage offers a more defined route. The longer reach makes wheel movement, liner flex and clearance especially important to verify.', connection:'Enclosed nozzle', end:'Free discharge near brakes', note:'Concept connection only. The stationary liner part does not attach to the moving brake assembly.', color:'#f3aa71', alt:'Orange enclosed nozzle with a curved passage, inlet flange and three proposed mounting pads.' },
-  b: { name:'Compact open guide', label:'B / COMPACT OPEN GUIDE', number:'02', kicker:'B — THE OPEN APPROACH', title:['Less enclosure.','More possibility.'], description:'A shorter, broad guide that leaves one side open. It is the first packaging candidate, with less control over where the air goes.', tag:'FIRST PACKAGING CANDIDATE', route:'Broad, open brake-region guide', outlet:'112 × 82 mm open envelope', tradeoff:'An open side makes the guide compact and easy to inspect. Air can also spill out, reducing directional capture.', connection:'Open guide', end:'Free discharge near brakes', note:'Concept connection only. No mechanical bridge to the moving brake assembly.', color:'#65ddc5', alt:'Teal compact open guide with an inlet flange and an intentionally open side.' },
-  c: { name:'Upstream hose adapter', label:'C / UPSTREAM HOSE ADAPTER', number:'03', kicker:'C — THE HOSE-FED APPROACH', title:['A different','connection.'], description:'A rectangular-to-round transition for a future hose-fed system. This concept completes the upstream adapter; the moving hose route and rotor receiver are separate work.', tag:'UPSTREAM COMPONENT ONLY', route:'Round connection for a future hose', outlet:'Ø57 mm bore / Ø63 mm outside', tradeoff:'The round outlet is substantially smaller than the inlet. Hose fit, retention, routing and a separate rotor receiver must be resolved; no complete cooling system is supplied.', connection:'Round hose adapter', end:'Hose + receiver: future work', note:'Concept architecture only. The downstream hose and rotor-side receiver are not included.', color:'#8baef4', alt:'Blue upstream hose adapter with a piecewise rectangular-to-round taper and a straight round band.' }
+  a: { name:'Hose adapter', label:'A / UPSTREAM HOSE ADAPTER', number:'01', kicker:'A — THE UPSTREAM CONNECTION', title:['One interface.','Two sizes.'], description:'A straight rectangular-to-round adapter compares nominal 2.5-inch and 3-inch hose classes on the same provisional liner interface.', tag:'TWO-SIZE REFERENCE', route:'Round land for a future hose', tradeoff:'A larger circular passage occupies more radial space. Actual hose, clamp, end treatment, insertion and retention remain unresolved.', connection:'Upstream adapter', end:'Hose joint unresolved', note:'Upstream component only. The straight axis is a controlled comparison, not a selected hose route.', color:'#65ddc5', alt:'Rectangular-to-round upstream adapter with a straight circular land and three proposed liner mounts.' },
+  b: { name:'Long rigid duct', label:'B / LONG RIGID DUCT', number:'02', kicker:'B — THE CLOSED REGIONAL DUCT', title:['A longer path.','A free outlet.'], description:'A closed curved duct continues the liner feed to a broad rectangular free outlet near the brake. Its 80-unit tangent extension is a first finite-envelope reference.', tag:'CLOSED REGIONAL REFERENCE', route:'Closed passage; free regional discharge', outlet:'102 × 78 · corner R10', tradeoff:'Length contains the route but increases the cantilever and occupied envelope. Secondary support, wheel movement, liner flex and service access remain unresolved.', connection:'Long closed rigid duct', end:'Free discharge near brakes', note:'No rigid bridge to the moving brake. A regional outlet is not a rotor-centre receiver.', color:'#f3aa71', alt:'Long curved closed rigid duct with an inlet flange, proposed mounts and rectangular free outlet.' },
+  c: { name:'Full hose system', label:'C / FULL HOSE-SYSTEM ARCHITECTURE', number:'03', kicker:'C — THE COMPLETE ARCHITECTURE', title:['Connect the','whole system.'], description:'A flattened liner transition, supported flexible hose and separate rotor-centre receiver. The architecture is defined; the moving route and receiver geometry remain unfinished.', tag:'SCHEMATIC · SYSTEM UNFINISHED', route:'Supported hose across relative motion', outlet:'Receiver and throat access unresolved', tradeoff:'A complete system needs two retained joints, a flex-rated route, supports and a heat-qualified receiver. An upstream adapter alone does not complete it.', connection:'Transition + supported hose', end:'Separate rotor-centre receiver', note:'Schematic only. Dashed hose route and receiver mounts are unresolved; no installed system CAD is shown.', color:'#8baef4' }
 };
-const viewNames = {part:'Part',context:'In the car',section:'Section', '3d':'Interactive 3D'};
+const viewNames = {part:'Part',context:'In the car',section:'Section','3d':'Interactive 3D',system:'Next steps'};
 const image = $('#concept-image'), stage = $('#concept-stage'), motion = matchMedia('(prefers-reduced-motion: reduce)');
-let selected='b', view='part', request=0, viewer, viewerReady, viewerAttempt=0, modelFailures=0, rotate=false, stageVisible=true;
-const caption = {part:'Original component geometry',context:'Recorded scan pose · wheel absent',section:'Diagnostic half-section · not a physical part','3d':'Drag to rotate · pinch to zoom'};
-const notes = {part:'Real geometry. Presentation colours. Nominal scale, not calibrated fit.',context:'Gray: recorded scan. Colour: concept. Static pose only; full motion remains unverified.',section:'A visual cut through the actual model. No global wall-thickness or manufacturing certification.','3d':'Part-only geometry. Display orientation and nominal scale do not establish installed fit.'};
+let selected='a', size='2p5', view='part', request=0, viewer, viewerReady, viewerAttempt=0, modelFailures=0, rotate=false, stageVisible=true;
+const caption = {part:'Native component geometry',context:'Recorded scan pose · wheel absent',section:'Diagnostic half-section · not a physical part','3d':'Drag to rotate · pinch to zoom'};
+const notes = {part:'Real component geometry. Nominal scale, not calibrated hose fit.',context:'Gray: recorded scan. Colour: component. Static pose only; full motion remains unverified.',section:'A visual cut through the actual model. No global wall-thickness or manufacturing qualification.','3d':'Component geometry only. Nominal scale and orientation do not establish installed fit.'};
+const systemViews = {
+  part:['System architecture · schematic','Architecture schematic. Dashed hose route and receiver mounts remain unresolved.','Four components; one complete architecture. The hose and receiver are not modelled as installed parts.'],
+  context:['Stationary and moving frames · schematic','Frame schematic. A supported flexible connection must accommodate steering and suspension movement.','The liner transition stays body-side. The nonrotating receiver follows steering and suspension; the rotor spins beside it.'],
+  section:['Joints and interfaces · schematic','Interface schematic. Actual joints, supports, mounts and accessible vane throat remain unresolved.','Verify the captured feed, two retained hose joints, supported flex span and noncontact receiver-to-rotor interface.'],
+  system:['Next evidence · schematic','Planning schematic. No full-system 3D model or installed hose route is available.','Select suitable hose and clamps; establish support and receiver datums; then check full motion, heat shielding and service access.']
+};
+function assetKey(){return selected==='a'?'r005-a-'+size:'r005-b';}
+function normalizeView(option,next){if(option==='c')return ['part','context','section','system'].includes(next)?next:next==='3d'?'system':'part';return ['part','context','section','3d'].includes(next)?next:'part';}
 
 function announce(text){ $('#announcement').textContent=text; }
 function animate(element){ if(!motion.matches) element.animate([{opacity:.2,transform:'translateY(9px)'},{opacity:1,transform:'translateY(0)'}],{duration:420,easing:'cubic-bezier(.2,.75,.25,1)'}); }
-function shareURL(){const url=new URL(location.href);url.searchParams.set('option',selected);url.searchParams.set('view',view);url.hash='concepts';return url.href;}
-function updateURL(){const url=new URL(location.href);url.searchParams.set('option',selected);url.searchParams.set('view',view);history.replaceState(null,'',url);}
+function shareURL(){const url=new URL(location.href);url.searchParams.set('option',selected);url.searchParams.set('view',view);url.searchParams.set('size',size);url.hash='concepts';return url.href;}
+function updateURL(){const url=new URL(location.href);url.searchParams.set('option',selected);url.searchParams.set('view',view);url.searchParams.set('size',size);history.replaceState(null,'',url);}
 function setRotation(value){rotate=value&&!motion.matches;$('#rotate-model').setAttribute('aria-pressed',String(rotate));$('#rotate-model').textContent=rotate?'Pause rotation':'Auto-rotate';if(viewer) viewer.autoRotate=rotate&&stageVisible&&!document.hidden&&view==='3d';}
 function resetCamera(){if(!viewer)return;viewer.cameraOrbit='35deg 63deg 105%';viewer.cameraTarget='0m 0m 0m';viewer.resetTurntableRotation();viewer.jumpCameraToGoal();}
 
@@ -30,6 +38,7 @@ function loadViewer(){
 }
 
 async function show3D(ticket){
+  if(selected==='c')return;
   $('#media-status').textContent='Preparing the real 3D model…';
   try{
     await loadViewer();if(ticket!==request||view!=='3d')return;
@@ -41,31 +50,41 @@ async function show3D(ticket){
       $('#model-slot').append(viewer);
     }
     viewer.alt='Interactive 3D: '+options[selected].name+'. Nominal, uncalibrated concept geometry.';
-    const modelSource=`assets/${selected}.glb`+(modelFailures?'?retry='+modelFailures:'');
+    const modelSource=`assets/${assetKey()}.glb`+(modelFailures?'?retry='+modelFailures:'');
     // The component keeps the previous loaded state until its next update.
     const alreadyLoaded=viewer.src===modelSource&&viewer.loaded;
-    viewer.poster=`assets/${selected}-poster.webp`;viewer.src=modelSource;
+    viewer.poster=`assets/${assetKey()}-poster.webp`;viewer.src=modelSource;
     $('#model-slot').hidden=false;
     if(alreadyLoaded){image.hidden=true;$('#media-status').textContent='';$('#model-controls').hidden=false;stage.setAttribute('aria-busy','false');resetCamera();setRotation(rotate);}
   }catch(error){if(ticket!==request)return;$('#media-status').textContent='3D is unavailable. The original CAD render remains available; tap Explore 3D to retry.';stage.setAttribute('aria-busy','false');}
 }
 
 async function select(option=selected,nextView=view,writeURL=true){
-  selected=options[option]?option:'b';view=Object.hasOwn(viewNames,nextView)?nextView:'part';const ticket=++request;const data=options[selected];
+  selected=options[option]?option:'a';view=normalizeView(selected,nextView);const ticket=++request,data=options[selected],schematic=selected==='c';
   document.documentElement.style.setProperty('--accent',data.color);$('.explorer').style.setProperty('--accent',data.color);
   document.querySelectorAll('[data-option]').forEach(button=>{const active=button.dataset.option===selected;button.setAttribute('aria-selected',String(active));button.tabIndex=active?0:-1;});
-  document.querySelectorAll('[data-view]').forEach(button=>{if(button.tagName==='BUTTON')button.setAttribute('aria-pressed',String(button.dataset.view===view));});
-  stage.setAttribute('aria-labelledby','tab-'+selected);stage.dataset.view=view;stage.setAttribute('aria-busy','true');
-  $('#stage-label').textContent=data.label;$('#stage-index').textContent=data.number;$('#view-caption').textContent=caption[view];$('#media-note').textContent=notes[view];$('#expand-image').hidden=view==='3d';
-  $('#story-number').textContent=data.number+' / '+(selected==='b'?'THE OPEN APPROACH':selected==='a'?'THE ENCLOSED APPROACH':'THE HOSE-FED APPROACH');
+  $('#size-controls').hidden=selected!=='a';
+  document.querySelectorAll('[data-size]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.size===size)));
+  const interactive=$('#view-interactive');interactive.dataset.view=schematic?'system':'3d';interactive.textContent=schematic?'Next steps':'Explore 3D';
+  const labels=schematic?{part:'System',context:'Frames',section:'Interfaces'}:{part:'Part',context:'In the car',section:'Section'};
+  document.querySelectorAll('.view-tabs [data-view]').forEach(button=>{if(labels[button.dataset.view])button.textContent=labels[button.dataset.view];button.setAttribute('aria-pressed',String(button.dataset.view===view));});
+  stage.setAttribute('aria-labelledby','tab-'+selected);stage.dataset.view=view;stage.dataset.architecture=selected;stage.setAttribute('aria-busy','true');
+  $('#stage-label').textContent=data.label;$('#stage-index').textContent=data.number;$('#stage-tag').textContent=schematic?'SYSTEM SCHEMATIC':'NATIVE CAD';
+  $('#view-caption').textContent=schematic?systemViews[view][0]:caption[view];$('#media-note').textContent=schematic?systemViews[view][1]:notes[view];$('#expand-image').hidden=schematic||view==='3d';
+  $('#story-number').textContent=data.number+' / '+(selected==='a'?'THE HOSE ADAPTER':selected==='b'?'THE CLOSED DUCT':'THE FULL SYSTEM');
   $('#concept-kicker').textContent=data.kicker;$('#concept-title').replaceChildren(document.createTextNode(data.title[0]),document.createElement('br'),document.createTextNode(data.title[1]));
-  for(const [id,text] of Object.entries({'concept-description':data.description,'recommendation':data.tag,'spec-route':data.route,'spec-outlet':data.outlet,'concept-tradeoff':data.tradeoff,'connection-part':data.connection,'connection-end':data.end,'diagram-note':data.note}))$('#'+id).textContent=text;
+  const outlet=selected==='a'?(size==='2p5'?'Ø57.5 bore / Ø63.5 outside':'Ø70.2 bore / Ø76.2 outside'):data.outlet;
+  for(const [id,text] of Object.entries({'concept-description':data.description,'recommendation':data.tag,'spec-route':data.route,'spec-outlet':outlet,'concept-tradeoff':data.tradeoff,'connection-part':data.connection,'connection-end':data.end,'diagram-note':data.note}))$('#'+id).textContent=text;
+  $('#spec-mount').textContent=schematic?'Body-side + separate moving receiver':'Proposed liner attachment';
+  $('#spec-note').textContent=selected==='a'?(size==='2p5'?'Clear land area: 2,596.723 nominal units².':'Clear land area: 3,870.474 nominal units².')+' CAD seeds; actual hose fit unresolved.':schematic?'System schematic; no measured receiver or hose route.':'102 × 78, R10 section; 80-unit tangent extension. Nominal and uncalibrated.';
   $('#model-slot').hidden=true;$('#model-controls').hidden=true;$('#media-status').textContent='';if(viewer)viewer.autoRotate=false;
-  image.hidden=false;image.alt=view==='context'?data.name+' shown in colour against the gray recorded brake-corner scan.':view==='section'?'Diagnostic visual half-section of '+data.name+'.':data.alt;
-  image.src=`assets/${selected}-${view==='part'||view==='3d'?'poster':view}.webp`;
+  image.hidden=schematic;$('#system-diagram').hidden=!schematic;
   if(writeURL)updateURL();
+  if(schematic){$('#system-diagram').dataset.diagramView=view;$('#system-detail').textContent=systemViews[view][2];stage.setAttribute('aria-busy','false');announce(data.name+' selected. '+systemViews[view][0]);animate($('#system-diagram'));return;}
+  image.alt=view==='context'?data.name+' shown in colour against the gray recorded brake-corner scan.':view==='section'?'Diagnostic visual half-section of '+data.name+'.':data.alt;
+  image.src=`assets/${assetKey()}-${view==='part'||view==='3d'?'poster':view}.webp`;
   try{await image.decode();}catch{if(ticket===request)$('#media-status').textContent='Image could not load. Try another view or reload the page.';}
-  if(ticket!==request)return;animate(image);announce(data.name+' selected. '+viewNames[view]+' view.');
+  if(ticket!==request)return;animate(image);announce(data.name+(selected==='a'?' '+(size==='2p5'?'2.5':'3')+' inch class':'')+' selected. '+viewNames[view]+' view.');
   if(view==='3d')await show3D(ticket);else stage.setAttribute('aria-busy','false');
 }
 
@@ -73,6 +92,7 @@ document.querySelectorAll('[data-option]').forEach(button=>button.addEventListen
 $('.option-tabs').addEventListener('keydown',event=>{const keys=['ArrowLeft','ArrowRight','Home','End'];if(!keys.includes(event.key))return;event.preventDefault();const index=['a','b','c'].indexOf(selected);const option=event.key==='Home'?'a':event.key==='End'?'c':['a','b','c'][(index+(event.key==='ArrowRight'?1:2))%3];select(option);$('#tab-'+option).focus();});
 document.querySelectorAll('.view-tabs [data-view]').forEach(button=>button.addEventListener('click',()=>select(selected,button.dataset.view)));
 document.querySelectorAll('[data-select]').forEach(button=>button.addEventListener('click',()=>{select(button.dataset.select,'part');$('#concepts').scrollIntoView({behavior:motion.matches?'instant':'smooth',block:'start'});}));
+document.querySelectorAll('[data-size]').forEach(button=>button.addEventListener('click',()=>{size=button.dataset.size==='3'?'3':'2p5';select(selected,view);}));
 $('#rotate-model').addEventListener('click',()=>setRotation(!rotate));$('#reset-model').addEventListener('click',resetCamera);
 motion.addEventListener('change',()=>{$('#rotate-model').disabled=motion.matches;if(motion.matches)setRotation(false);});$('#rotate-model').disabled=motion.matches;
 new IntersectionObserver(entries=>{stageVisible=entries[0].isIntersecting;setRotation(rotate);},{threshold:.05}).observe(stage);
@@ -90,7 +110,7 @@ const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entr
 document.querySelectorAll('.reveal').forEach(element=>observer.observe(element));document.documentElement.classList.add('js');
 let scrollPending=false;function progress(){const distance=document.documentElement.scrollHeight-innerHeight;$('.read-progress span').style.transform=`scaleX(${distance>0?Math.min(1,Math.max(0,scrollY/distance)):0})`;scrollPending=false;}
 addEventListener('scroll',()=>{if(!scrollPending){scrollPending=true;requestAnimationFrame(progress);}},{passive:true});addEventListener('resize',progress);progress();
-function restore(){const params=new URLSearchParams(location.search);select(params.get('option')||'b',params.get('view')||'part',false);}
+function restore(){const params=new URLSearchParams(location.search);size=params.get('size')==='3'?'3':'2p5';select(params.get('option')||'a',params.get('view')||'part',false);}
 addEventListener('popstate',restore);restore();
 
 new ResizeObserver(()=>{document.documentElement.style.setProperty('--header-height',$('.site-header').getBoundingClientRect().height+'px');}).observe($('.site-header'));

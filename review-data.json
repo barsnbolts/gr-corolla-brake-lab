@@ -1,0 +1,649 @@
+{
+  "updated": "2026-10-23",
+  "versions": [
+    {
+      "id": "V1",
+      "title": "Enclosed liner duct",
+      "summary": "Body-fixed passage \u2192 free jet toward the inner rotor region.",
+      "decision": "V1 practical packaging model complete: Corolla-specific mounting, shorter directed outlet, and approximate steering checked. Physical fit and cooling performance remain unverified.",
+      "color": "#b44923"
+    },
+    {
+      "id": "V2",
+      "title": "Open brake-side guide",
+      "summary": "Knuckle-following open guide \u2192 inner rotor ventilation region.",
+      "decision": "Borrow the open turning surface. Keep the chosen knuckle support; arm-mounted examples do not prove its motion clearance.",
+      "color": "#286a59"
+    },
+    {
+      "id": "V3",
+      "title": "Hose-fed rotor receiver",
+      "summary": "Liner transition \u2192 flexible hose \u2192 close rotor-vent receiver.",
+      "decision": "Prioritise rotor ventilation entry. Retain the OEM structural bracket and design a separate nonstructural carrier.",
+      "color": "#355b9b"
+    },
+    {
+      "id": "V4",
+      "title": "Rotor + caliper cooling",
+      "summary": "Rotor feed plus a deliberate pad/caliper path and removable shell.",
+      "decision": "Design around our OEM ADVICS four-piston front caliper. Preserve rotor delivery and give the removable caliper branch a real target and exit. No direct-fit OEM hood verified in this search.",
+      "color": "#71528b"
+    }
+  ],
+  "examples": [
+    {
+      "id": "V1-01",
+      "version": "V1",
+      "title": "Tsukuba_Cat \u00b7 GR Yaris",
+      "kind": "Owner\u2019s V1 reference",
+      "url": "https://cults3d.com/en/3d-model/various/gr-yaris-brake-cooling-duct",
+      "borrow": "Integrated flange, flattened curved passage and free rectangular outlet.",
+      "limit": "Yaris inlet, holes and outlet angle are not Corolla measurements. Paid donor STL not acquired.",
+      "images": [
+        {
+          "src": "https://fbi.cults3d.com/uploaders/34810590/illustration-file/c90a4460-c56b-41be-9886-161d21d06768/image_2026-08-21_192947333.png",
+          "caption": "Maker gallery \u00b7 paired ducts \u00b7 remotely hosted"
+        },
+        {
+          "src": "https://fbi.cults3d.com/uploaders/34810590/illustration-file/41c08659-c56a-4bfc-b719-d494d126550e/image_2026-08-21_193018160.png",
+          "caption": "Maker gallery \u00b7 alternate angle \u00b7 remotely hosted"
+        },
+        {
+          "src": "https://fbi.cults3d.com/uploaders/34810590/illustration-file/77f965b4-298a-46cf-99c3-18a5761e3a92/image_2026-08-21_190351504.png",
+          "caption": "Maker gallery \u00b7 Yaris scan context \u00b7 remotely hosted"
+        }
+      ],
+      "secondary": false,
+      "links": []
+    },
+    {
+      "id": "V1-02",
+      "version": "V1",
+      "title": "SKR Dynamics \u00b7 GR Yaris",
+      "kind": "Shape + installed context",
+      "url": "https://www.skrdynamics.com/product-page/gr-yaris-brake-duct",
+      "borrow": "Scan-based packaging, an inlet seat shaped around the original lip, and a smooth hollow sweep. Views 02/04/05 show context; 07 shows the seat; 08 shows the passage section.",
+      "limit": "SKR confirms Yaris Circuit Pack Gen1/2. Corolla interchange remains unconfirmed; compare the opening, curved seat and true fixings, then terminal placement.",
+      "images": [
+        {
+          "src": "assets/review/v1-02-skr-product.png",
+          "caption": "SKR 01/13 \u00b7 Brake Cooling Outlets for a GR Yaris - Product photo on white background \u00b7 maker photo / video still"
+        },
+        {
+          "src": "https://static.wixstatic.com/media/08c837_e4ada04e51be4b13811869cb06847731~mv2.jpeg",
+          "caption": "SKR 02/13 \u00b7 GR Yaris brake duct cooling digital mock up \u00b7 source CAD illustration"
+        },
+        {
+          "src": "https://static.wixstatic.com/media/08c837_85a48aece38242c9a0096278f6c8db28~mv2.jpeg",
+          "caption": "SKR 03/13 \u00b7 GR Yaris brake duct cooling fitted, wheel off \u00b7 maker photo / video still"
+        },
+        {
+          "src": "https://static.wixstatic.com/media/08c837_a8b3475947cb44ac9069284c243aa094~mv2.jpeg",
+          "caption": "SKR 04/13 \u00b7 GR Yaris brake duct cooling digital mock up \u00b7 source CAD illustration"
+        },
+        {
+          "src": "https://static.wixstatic.com/media/08c837_4bcf22928dc1493cb86621a8ee8cd062~mv2.jpeg",
+          "caption": "SKR 05/13 \u00b7 GR Yaris brake duct cooling digital mock up \u00b7 source CAD illustration"
+        },
+        {
+          "src": "https://static.wixstatic.com/media/08c837_906d975e450e48bfb120e1fd7e50e393~mv2.jpeg",
+          "caption": "SKR 06/13 \u00b7 GR Yaris brake duct cooling digital mock up \u00b7 source CAD illustration"
+        },
+        {
+          "src": "https://static.wixstatic.com/media/08c837_a40a5a785e5b4bd5a80019520a58d2aa~mv2.jpeg",
+          "caption": "SKR 07/13 \u00b7 GR Yaris brake duct cooling digital mock up showing inlet \u00b7 source CAD illustration"
+        },
+        {
+          "src": "https://static.wixstatic.com/media/08c837_bfea063ee1224d6ab1ba51ca3a77a764~mv2.jpeg",
+          "caption": "SKR 08/13 \u00b7 GR Yaris brake duct cooling digital mock up section view \u00b7 source CAD illustration"
+        },
+        {
+          "src": "assets/review/v1-02-skr-installed.jpeg",
+          "caption": "SKR 09/13 \u00b7 GR Yaris brake duct cooling fitted, wheel off, showing brake calliper clearance \u00b7 maker photo / video still"
+        },
+        {
+          "src": "https://static.wixstatic.com/media/08c837_89b263ea92ea44dc95ba8f34d4a9d3e1~mv2.jpeg",
+          "caption": "SKR 10/13 \u00b7 GR Yaris brake duct cooling fitted, wheel off, showing brake calliper clearance \u00b7 maker photo / video still"
+        },
+        {
+          "src": "https://static.wixstatic.com/media/08c837_1e9ee3c9c6604d70931884470ac88ba6~mv2.jpeg",
+          "caption": "SKR 11/13 \u00b7 GR Yaris brake duct cooling fitted, wheel off, showing brake calliper clearance \u00b7 maker photo / video still"
+        },
+        {
+          "src": "https://static.wixstatic.com/media/08c837_fce6aa8318314df097a970ab85073ed8f002.jpg",
+          "caption": "SKR 12/13 \u00b7 GR Yaris brake duct cooling fitted, wheel off, showing wheel clearance \u00b7 maker photo / video still"
+        },
+        {
+          "src": "https://static.wixstatic.com/media/08c837_0457886e0c384022848f04f0d377c617~mv2.jpeg",
+          "caption": "SKR 13/13 \u00b7 GR Yaris on track at Bedford \u00b7 maker photo / video still"
+        }
+      ],
+      "secondary": false,
+      "links": []
+    },
+    {
+      "id": "V1-03",
+      "version": "V1",
+      "title": "AIRTEC \u00b7 GR Yaris",
+      "kind": "Support detail",
+      "url": "https://www.airtecmotorsport.com/wp-content/uploads/sites/4/2026/02/YGR-FRONT-BRAKE-DUCTS-FITTING-INSTRUCTIONS.pdf",
+      "borrow": "Third support tab placed against the actual installed duct body.",
+      "limit": "Do not copy the drilled arch location, fasteners or donor clearance.",
+      "images": [
+        {
+          "src": "assets/review/v1-03-airtec-yaris-p03.png",
+          "caption": "AIRTEC fitting guide \u00b7 page 3"
+        },
+        {
+          "src": "assets/review/v1-03-airtec-yaris-p04.png",
+          "caption": "AIRTEC fitting guide \u00b7 page 4"
+        }
+      ],
+      "secondary": false,
+      "links": []
+    },
+    {
+      "id": "V2-01",
+      "version": "V2",
+      "title": "PIRAS PIII \u00b7 GR Corolla",
+      "kind": "Same car \u00b7 arm-mounted",
+      "url": "https://www.pirasmotorsport.com/collections/best-sellers/products/piii-gr-corolla-brake-cooling-kit",
+      "borrow": "Low mouth, broad turning face and raised edges in Corolla packaging.",
+      "limit": "Control-arm attachment differs from our knuckle-following V2.",
+      "images": [
+        {
+          "src": "assets/review/v2-01-piras-installed.jpg",
+          "caption": "PIRAS installed product photo"
+        }
+      ],
+      "secondary": false,
+      "links": []
+    },
+    {
+      "id": "V2-02",
+      "version": "V2",
+      "title": "cworks_pl \u00b7 Nissan 350Z",
+      "kind": "Open scoop shape",
+      "url": "https://cults3d.com/en/3d-model/gadget/nissan-350z-z33-brake-cooling-brake-duct-air-guide",
+      "borrow": "Broad open spoon and continuous rising floor; separate saddle and airflow surface.",
+      "limit": "Arm-mounted, different car. Paid STEP not retained.",
+      "images": [
+        {
+          "src": "assets/review/v2-02-cworks-350z-cad.png",
+          "caption": "Maker CAD illustration \u00b7 not our geometry"
+        },
+        {
+          "src": "assets/review/v2-02-cworks-350z-installed.jpeg",
+          "caption": "Maker installation photo"
+        }
+      ],
+      "secondary": false,
+      "links": []
+    },
+    {
+      "id": "V2-03",
+      "version": "V2",
+      "title": "Chevrolet \u00b7 Corvette rear",
+      "kind": "Two-part delivery",
+      "url": "https://www.chevrolet.com/content/dam/chevrolet/na/us/english/index/Performance/corvette-experience/02-pdfs/v2/corvette-academy-track-preparation-guide.pdf#page=8",
+      "borrow": "Separate arm pickup and close knuckle guide: collection and delivery have different jobs.",
+      "limit": "Rear Corvette hardware. The guide is not evidence for a Corolla mount or gap.",
+      "images": [
+        {
+          "src": "assets/review/v2-03-corvette-p8.png",
+          "caption": "Chevrolet guide \u00b7 page 8 \u00b7 rear items 3 and 4"
+        }
+      ],
+      "secondary": false,
+      "links": []
+    },
+    {
+      "id": "V2-04",
+      "version": "V2",
+      "title": "A\u2019PEXi N1 \u00b7 GR Corolla",
+      "kind": "Additional design \u00b7 chassis air shroud",
+      "url": "https://www.apexi.co.jp/products/others/gr-corolla-gzea14h-originalparts/",
+      "borrow": "Owner-selected additional design: broad collector/turning floor, curved side edge and local support tabs. Third image shows the shroud CAD over scan context.",
+      "limit": "Separate stationary underbody design. Keep distinct from our knuckle-following V2; source images do not establish our exact fixing dimensions or airflow.",
+      "images": [
+        {
+          "src": "assets/review/v2-04-apexi-installed.jpg",
+          "caption": "A\u2019PEXi installed photo"
+        },
+        {
+          "src": "assets/review/v2-04-apexi-product.jpg",
+          "caption": "A\u2019PEXi product photo"
+        },
+        {
+          "src": "assets/review/v2-04-apexi-path.jpg",
+          "caption": "A\u2019PEXi purple shroud CAD over gold scan/context \u00b7 not airflow simulation"
+        },
+        {
+          "src": "https://www.apexi.co.jp/wp-content/uploads/2025/07/img_brakeairshroud-grcorolla_04_520x350.jpg",
+          "caption": "A\u2019PEXi wide scan/CAD context with wheel \u00b7 stationary underbody shroud"
+        }
+      ],
+      "secondary": false,
+      "links": []
+    },
+    {
+      "id": "V2-05",
+      "version": "V2",
+      "title": "MagnusT \u00b7 BMW M2",
+      "kind": "Retained donor STL \u00b7 hose pickup",
+      "url": "https://www.thingiverse.com/thing:4436752",
+      "borrow": "Low pickup separated from the downstream hose; actual retained mesh available.",
+      "limit": "Arm ties and hose-fed architecture differ from our hose-free V2. CC BY 4.0 attribution retained.",
+      "images": [
+        {
+          "src": "assets/review/v2-05-magnust-bmw-m2-cad.png",
+          "caption": "MagnusT CAD illustration"
+        },
+        {
+          "src": "assets/review/v2-05-magnust-bmw-m2-installed.jpg",
+          "caption": "MagnusT installed photo"
+        }
+      ],
+      "secondary": false,
+      "links": [
+        {
+          "label": "Scoop.stl",
+          "url": "../work/research/r008-scoop-assets/magnust-bmw-m2-v2/Scoop.stl"
+        },
+        {
+          "label": "Tube.stl",
+          "url": "../work/research/r008-scoop-assets/magnust-bmw-m2-v2/Tube.stl"
+        }
+      ]
+    },
+    {
+      "id": "V2-06",
+      "version": "V2",
+      "title": "ivy_tbh \u00b7 MQB",
+      "kind": "Enclosed alternative",
+      "url": "https://makerworld.com/en/models/696522-audi-vw-skoda-seat-mqb-brake-cooling-duct",
+      "borrow": "Broad pickup, turn and distributed attachment features.",
+      "limit": "Enclosed arm-mounted duct. Useful contrast, not the chosen V2 architecture; model not retained.",
+      "images": [
+        {
+          "src": "assets/review/v2-06-ivy-mqb-cad.webp",
+          "caption": "Maker CAD illustration"
+        },
+        {
+          "src": "assets/review/v2-06-ivy-mqb-overview.webp",
+          "caption": "Maker overview"
+        }
+      ],
+      "secondary": false,
+      "links": []
+    },
+    {
+      "id": "V3-01",
+      "version": "V3",
+      "title": "Verus \u00b7 GR Corolla Morizo",
+      "kind": "Same car \u00b7 liner \u2192 hose \u2192 rotor",
+      "url": "https://www.verus-engineering.com/shop/morizo-brake-cooling-kit-toyota-gr-corolla-5125",
+      "borrow": "Clear module boundaries: liner transition, clamped hose, rotor-side plate and duct.",
+      "limit": "Morizo inlet and mounting stack require adaptation. Older R01 carbon and current stainless revisions must stay distinct.",
+      "images": [
+        {
+          "src": "assets/review/v3-01-verus-feed.jpg",
+          "caption": "Verus feed product photo"
+        },
+        {
+          "src": "assets/review/v3-01-verus-receiver.jpg",
+          "caption": "Verus receiver photo \u00b7 exact revision unconfirmed"
+        },
+        {
+          "src": "assets/review/v3-01-verus-circuit-morizo-r01-p15.png",
+          "caption": "Verus R01 guide \u00b7 historical installation, page 15"
+        },
+        {
+          "src": "assets/review/v3-01-verus-circuit-morizo-r01-p19.png",
+          "caption": "Verus R01 guide \u00b7 historical installation, page 19"
+        }
+      ],
+      "secondary": false,
+      "links": []
+    },
+    {
+      "id": "V3-02",
+      "version": "V3",
+      "title": "TF-Works TFW-30 \u00b7 GR Corolla",
+      "kind": "Same car \u00b7 structural replacement",
+      "url": "https://www.tf-works.com/tf-works-billet-brake-cooling-duct-kit-toyota-gr-corolla/",
+      "borrow": "Compact rotor receiver and removable upstream pickup. Also useful V2 packaging context.",
+      "limit": "Receiver is integrated into a replacement structural caliper bracket. Our design retains the OEM structural bracket.",
+      "images": [
+        {
+          "src": "assets/review/v3-02-tfworks-complete-kit.jpg",
+          "caption": "TF-Works complete kit"
+        },
+        {
+          "src": "assets/review/v3-02-tfworks-installed-receiver.jpg",
+          "caption": "TF-Works installed receiver"
+        },
+        {
+          "src": "assets/review/v3-02-tfworks-bracket-product.jpg",
+          "caption": "TF-Works structural bracket with integrated receiver"
+        }
+      ],
+      "secondary": false,
+      "links": []
+    },
+    {
+      "id": "V4-01",
+      "version": "V4",
+      "title": "Sprogley \u00b7 AP CP9660",
+      "kind": "Removable caliper scoop",
+      "url": "https://www.sprogleymotorsport.co.uk/product-page/sprogley-motorsport-caliper-cooling-scoops-ap-racing-pro5000r-cp9660",
+      "borrow": "Removable supplied-air scoop aimed at the pads/caliper; separately adjustable connection.",
+      "limit": "Different caliper. Mounts, barrel clearance, heat capability and feed sizing need our own design. Maker prioritises rotor backing plate if only one air supply.",
+      "images": [
+        {
+          "src": "https://static.wixstatic.com/media/f409d7_10c92c528947421181e70efd25e910f3~mv2.jpg/v1/fill/w_1378,h_1102,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/f409d7_10c92c528947421181e70efd25e910f3~mv2.jpg",
+          "caption": "Sprogley product photo \u00b7 remotely hosted"
+        },
+        {
+          "src": "https://static.wixstatic.com/media/f409d7_62260abd658b4a88b89537c57216ac23~mv2.jpg/v1/fill/w_735,h_1102,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/f409d7_62260abd658b4a88b89537c57216ac23~mv2.jpg",
+          "caption": "Sprogley alternate view \u00b7 remotely hosted"
+        },
+        {
+          "src": "https://static.wixstatic.com/media/f409d7_a6cbd16e47714a0bb899d447feda0fdd~mv2.jpg/v1/fill/w_1126,h_936,al_c,q_85,enc_avif,quality_auto/f409d7_a6cbd16e47714a0bb899d447feda0fdd~mv2.jpg",
+          "caption": "Sprogley detail \u00b7 remotely hosted"
+        }
+      ],
+      "secondary": false,
+      "links": []
+    },
+    {
+      "id": "V4-02",
+      "version": "V4",
+      "title": "AP Racing \u00b7 independent feeds",
+      "kind": "Rotor + caliper paths",
+      "url": "https://apracing.com/cdn/pages/40/40/CP2494-89cd_02.pdf#page=3",
+      "borrow": "Separate rotor and caliper air paths can be adjusted independently.",
+      "limit": "Carbon-brake example. Do not transfer its duct sizes, gap or flow split.",
+      "images": [
+        {
+          "src": "assets/review/AP-CP2494-89cd-02.png",
+          "caption": "AP CP2494-89cd \u00b7 source sheet 3 \u00b7 enlarge to read"
+        }
+      ],
+      "secondary": false,
+      "links": []
+    },
+    {
+      "id": "V4-03",
+      "version": "V4",
+      "title": "AP Racing \u00b7 CP6840",
+      "kind": "Dedicated caliper duct",
+      "url": "https://apracing.com/drawings/cp6840-1_cd.pdf#page=2",
+      "borrow": "Shaped duct with dedicated fasteners close to its intended caliper.",
+      "limit": "Different AP caliper; not Corolla holes, clearance or dimensions.",
+      "images": [
+        {
+          "src": "assets/review/AP-CP6840-1cd.png",
+          "caption": "AP CP6840-1CD \u00b7 source sheet 2 \u00b7 enlarge to read"
+        }
+      ],
+      "secondary": false,
+      "links": []
+    },
+    {
+      "id": "V2-07",
+      "version": "V2",
+      "title": "Brake-cooling system suitable for BMW M2/M3/M4 and Toyota Supra, Clubsport front-to-rear set 14311 \u2014 SPEED Engineering",
+      "kind": "Related mechanism \u00b7 source only",
+      "url": "https://www.speedengineering.de/en/Brake-cooling-system-suitable-for-BMW-M2-M3-M4-G87-G80-82-F87-F80-F82-and-Toyota-Supra-MK5-Clubsport-front-to-rear-set/14311",
+      "borrow": "attachment features and keeping an open guide within a lower envelope.",
+      "limit": "assume broad title means universal fit, take PA12 as generic process approval, or use BMW wishbone geometry on GRC.",
+      "images": [],
+      "secondary": true,
+      "links": []
+    },
+    {
+      "id": "V2-08",
+      "version": "V2",
+      "title": "8V Audi / Mk3 TTRS brake deflector \u2014 CJM Industries",
+      "kind": "Related mechanism \u00b7 source only",
+      "url": "https://cjmind.com/products/8vbrakecooling",
+      "borrow": "separate aerodynamic shell and mount; explicit attention to caliper interference at lock.",
+      "limit": "arm brackets, material claims, or any donor clearance.",
+      "images": [],
+      "secondary": true,
+      "links": []
+    },
+    {
+      "id": "V2-09",
+      "version": "V2",
+      "title": "BRZ / GR86 / GT86 / FRS Front Brake Ducts \u2014 Ansix Auto",
+      "kind": "Related mechanism \u00b7 source only",
+      "url": "https://ansixauto.com/brz-gr86-gt86-frs-front-brake-ducts/?setCurrencyId=1",
+      "borrow": "keep air collection distinct from boot protection; the manual calls out consequences of full shield removal.",
+      "limit": "arm hole, shield cuts or installation.",
+      "images": [],
+      "secondary": true,
+      "links": []
+    },
+    {
+      "id": "V2-10",
+      "version": "V2",
+      "title": "Vorshlag BMW E46 Brake Cooling Deflector Kit",
+      "kind": "Related mechanism \u00b7 source only",
+      "url": "https://vorshlag-store.com/products/vorshlag-bmw-e46-brake-cooling-deflector-kit",
+      "borrow": "receiver and boot-shielding functions can be separate from the upstream pickup.",
+      "limit": "E46 spindle mount, three-bolt pattern, or tire-clearance claims.",
+      "images": [],
+      "secondary": true,
+      "links": []
+    },
+    {
+      "id": "V2-11",
+      "version": "V2",
+      "title": "911 GT3 chassis technical description \u2014 Porsche",
+      "kind": "Related mechanism \u00b7 source only",
+      "url": "https://newsroom.porsche.com/en/press-kits/911-GT3/Chassis-and-dynamics.html",
+      "borrow": "a shaped suspension member can influence brake airflow.",
+      "limit": "Porsche arm shape or claim an add-on blade is an equivalent.",
+      "images": [],
+      "secondary": true,
+      "links": []
+    },
+    {
+      "id": "V2-12",
+      "version": "V2",
+      "title": "DE4008722A1 \u2014 Volkswagen brake-air deflector patent",
+      "kind": "Related mechanism \u00b7 source only",
+      "url": "https://patents.google.com/patent/DE4008722A1/en",
+      "borrow": "caliper-following baffle is a distinct mechanical frame and possible near-brake path.",
+      "limit": "illustrated floating-caliper fit or patent geometry; it is not a GR drawing or performance result.",
+      "images": [],
+      "secondary": true,
+      "links": []
+    },
+    {
+      "id": "V2-13",
+      "version": "V2",
+      "title": "US20240278751A1 \u2014 Toyota/Subaru steering-relative brake duct patent",
+      "kind": "Related mechanism \u00b7 source only",
+      "url": "https://patents.google.com/patent/US20240278751A1/en",
+      "borrow": "arm- and knuckle-mounted pieces change relationship during steering; proximity to the axis reduces, but does not remove, that change.",
+      "limit": "any assumed GRC axis, arm, or dimensions.",
+      "images": [],
+      "secondary": true,
+      "links": []
+    },
+    {
+      "id": "V1-04",
+      "version": "V1",
+      "title": "Brake Colling Sistem for GR Yaris \u2014 fabernet89",
+      "kind": "Related mechanism \u00b7 source only",
+      "url": "https://cults3d.com/en/3d-model/gadget/brake-colling-sistem-for-gr-yaris",
+      "borrow": "only the visible paired liner-duct / flat port-transition concept if a gallery needs a hose-transition contrast.",
+      "limit": "branded installed photo as proof of file authorship or use as a caliper scoop.",
+      "images": [],
+      "secondary": true,
+      "links": []
+    },
+    {
+      "id": "V1-05",
+      "version": "V1",
+      "title": "Toyota GR Yaris Brake Air Ducts \u2014 TriArt",
+      "kind": "Related mechanism \u00b7 source only",
+      "url": "https://triart.bigcartel.com/product/toyota-gr-yaris-brake-air-duct",
+      "borrow": "general long enclosed duct form if comparing Yaris-era alternatives.",
+      "limit": "unspecified mounting detail, Yaris geometry, or assume a caliper attachment.",
+      "images": [],
+      "secondary": true,
+      "links": []
+    },
+    {
+      "id": "V4-04",
+      "version": "V4",
+      "title": "Ferrari / Brembo \u00b7 SF90",
+      "kind": "Integrated mechanism \u00b7 diagram",
+      "url": "https://cdn.ferrari.com/cms/network/media/pdf/pr_ferrari_sf90_stradale_gbr.pdf",
+      "borrow": "Caliper-integrated distributor feeds the pad/disc region.",
+      "limit": "Integrated OEM appendage, not an add-on hood.",
+      "images": [
+        {
+          "src": "assets/review/sf90.svg",
+          "caption": "Project explanatory schematic \u00b7 not a source photograph or airflow simulation"
+        }
+      ],
+      "secondary": true,
+      "links": []
+    },
+    {
+      "id": "V4-05",
+      "version": "V4",
+      "title": "Brembo \u00b7 Dyadema",
+      "kind": "Integrated mechanism \u00b7 diagram",
+      "url": "https://www.brembo.com/en/ComunicatiStampa/2019/1.Brembo%20New%20Dyadema%20Caliper_ENG.pdf",
+      "borrow": "Cast-in channels circulate air near the pads.",
+      "limit": "Internal casting geometry cannot be replicated with an external cover.",
+      "images": [
+        {
+          "src": "assets/review/dyadema.svg",
+          "caption": "Project explanatory schematic \u00b7 not a source photograph or airflow simulation"
+        }
+      ],
+      "secondary": true,
+      "links": []
+    },
+    {
+      "id": "V4-06",
+      "version": "V4",
+      "title": "Brembo \u00b7 Stylema R",
+      "kind": "Integrated mechanism \u00b7 diagram",
+      "url": "https://www.brembo.com/en/ComunicatiStampa/1.%20Brembo_Stylema%20R_new%20caliper_ENG.pdf",
+      "borrow": "Ventilated pistons and a central bridge outlet illustrate a complete exit path.",
+      "limit": "Motorcycle internal passages, not permission to modify the GR caliper.",
+      "images": [
+        {
+          "src": "assets/review/stylema.svg",
+          "caption": "Project explanatory schematic \u00b7 not a source photograph or airflow simulation"
+        }
+      ],
+      "secondary": true,
+      "links": []
+    },
+    {
+      "id": "V4-07",
+      "version": "V4",
+      "title": "Brembo New GT braking system (2026 WEC)",
+      "kind": "Related mechanism \u00b7 source only",
+      "url": "https://www.brembo.com/en/motorsport/wec/gt-new-braking-system",
+      "borrow": "Optional Airduct Design is offered for targeted caliper cooling, with disc ventilation described separately.",
+      "limit": "Public text does not establish whether it is a removable hood or provide interface geometry; use only as a manufacturer precedent for an optional caliper-specific cooling feature.",
+      "images": [],
+      "secondary": true,
+      "links": []
+    },
+    {
+      "id": "V4-08",
+      "version": "V4",
+      "title": "Ferrari 296 GTB press kit",
+      "kind": "Related mechanism \u00b7 source only",
+      "url": "https://www.ferrari.com/content/dam/ferrari-fcom/old/pdf/CS_296_GTB_final_gbr.pdf",
+      "borrow": "Dedicated body inlet/duct feeds vents incorporated in the caliper casting.",
+      "limit": "Strong cast-in versus add-on distinction; Ferrari's route and casting are platform-specific. The source does not independently identify the caliper maker.",
+      "images": [],
+      "secondary": true,
+      "links": []
+    },
+    {
+      "id": "V4-09",
+      "version": "V4",
+      "title": "Aston Martin Valhalla technical overview",
+      "kind": "Related mechanism \u00b7 source only",
+      "url": "https://media.astonmartin.com/valhalla-the-ultimate-drivers-supercar/?lang=eng&view=cp",
+      "borrow": "Dedicated external feed plus vented pistons illustrates separate external and internal targets.",
+      "limit": "It does not establish removable hood, GR geometry, or caliper manufacturer in the cited passage.",
+      "images": [],
+      "secondary": true,
+      "links": []
+    },
+    {
+      "id": "V4-10",
+      "version": "V4",
+      "title": "Brembo GP4-MotoGP caliper",
+      "kind": "Related mechanism \u00b7 source only",
+      "url": "https://www.brembo.com/en/solutions/for-your-bike/caliper-gp4-motogp",
+      "borrow": "Integral fins and drilled pistons address exposed-body and piston heat mechanisms.",
+      "limit": "These are not a supplied-air hood; superficial fins on an insulating cover would not reproduce them.",
+      "images": [],
+      "secondary": true,
+      "links": []
+    },
+    {
+      "id": "V4-11",
+      "version": "V4",
+      "title": "2020 Nissan GT-R NISMO \u2014 \u201cput to the test\u201d",
+      "kind": "Related mechanism \u00b7 source only",
+      "url": "https://europe.nissannews.com/en-GB/releases/2020-nissan-gt-r-nismo-put-to-the-test",
+      "borrow": "Air guide is explicitly rotor-centre cooling, not caliper hood evidence.",
+      "limit": "Useful counterexample against labelling any nearby guide as caliper cooling.",
+      "images": [],
+      "secondary": true,
+      "links": []
+    },
+    {
+      "id": "V4-12",
+      "version": "V4",
+      "title": "Porsche 911 GT3 RS press kit (992)",
+      "kind": "Related mechanism \u00b7 source only",
+      "url": "https://newsroom.porsche.com/dam/jcr%3A46a23375-e7ee-4507-a577-d9761b784d33/992%2520911%2520GT3%2520RS%2520Press%2520Kit%25201.pdf",
+      "borrow": "Describes front brake-system intake and rear underbody cooling, but does not identify Brembo or target a caliper.",
+      "limit": "Packaging analogy only; weak evidence for V4.",
+      "images": [],
+      "secondary": true,
+      "links": []
+    },
+    {
+      "id": "V4-13",
+      "version": "V4",
+      "title": "AP Racing CP6277/CP6278 GT/endurance catalogue entry, printed p. 13",
+      "kind": "Related mechanism \u00b7 source only",
+      "url": "https://apracing.com/drawings/2019%20Catalogue/Web%20Version%20-%202019%20Product%20Catalogue.pdf",
+      "borrow": "Supports that dedicated caliper cooling ducts are used in GT/endurance parts; photos do not establish each internal target.",
+      "limit": "Keep secondary; no project geometry transfers.",
+      "images": [],
+      "secondary": true,
+      "links": []
+    },
+    {
+      "id": "V3-03",
+      "version": "V3",
+      "title": "Verus \u00b7 standard GR Corolla kit",
+      "kind": "Related intake alternative",
+      "url": "https://www.verus-engineering.com/shop/full-brake-cooling-kit-toyota-gr-corolla-4199",
+      "borrow": "Compare the separate intake, hose and rotor-side hardware.",
+      "limit": "Bumper intake differs from our selected wheel-well outlet.",
+      "images": [],
+      "secondary": true,
+      "links": []
+    }
+  ]
+}

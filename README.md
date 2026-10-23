@@ -1,7 +1,9 @@
 # GR Brake Lab
 
-A mobile-first, buildless showcase of three scan-based GR Corolla brake-cooling component concepts. Public media is limited to derived images and the three proposed parts. Raw scans, project paths, CAD source and private evidence are not included.
+Public review: https://barsnbolts.github.io/gr-corolla-brake-lab/
 
-Open index.html through a static HTTP server or GitHub Pages. Interactive 3D loads a pinned local copy of Google model-viewer 4.4.0 only when selected. Third-party license notices are in assets/vendor/. Display fonts use Barlow Condensed (SIL OFL). The concept media is original project work.
+Current landing page: V1 practical packaging model, 23 October 2026. Includes current context stills, an on-demand duct viewer, optional 50 MB partial-CAD steering animation, STEP/GLB downloads, scope and limitations. Initial page load does not download the 3D assemblies. Four-version numbered references and browser-local feedback remain at review.html; all local image paths are self-contained. Previous concepts and R015 review are retained as archive pages.
 
-Fit, retention, wheel/full-motion clearance, materials/heat and cooling remain unverified. The hose adapter is upstream only.
+Buildless HTML/CSS/JS. Pinned local model-viewer with existing vendor licences. Serve with a static HTTP server; deployment uses the existing GitHub Pages main-branch source. No raw full scan, private receipts or filesystem paths are published. Derived CAD assembly and requested editable duct export are included for review.
+
+Practical modelling is complete; physical fit, wheel/tire clearance, supported ride-height travel, actual hose routing, materials/heat and cooling performance remain unverified. Model checks are not installation approval. Reference images remain attributed to their creators in the numbered library. Browser feedback is device/origin-local and can be exported to chat.
